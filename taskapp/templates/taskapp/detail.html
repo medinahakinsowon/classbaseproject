@@ -1,0 +1,9 @@
+{% extends 'taskapp/base.html' %}
+{% block content %}
+  
+   <h1>{{task.name}}</h1>
+     {{task.description}}
+     <br>
+     <a href="{% url 'update_task' id=task.id %}">update_task</a>
+     <a href="{% url 'delete_task' id=task.id %}">delete_task</a>
+{% endblock content %}
